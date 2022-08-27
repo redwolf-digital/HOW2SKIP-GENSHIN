@@ -1,7 +1,8 @@
 #include <Arduino.h>
+#include "Keyboard.h"
 
 void setup() {
-  Serial.begin(115200); //TEST
+  
 }
 
 void loop() {
