@@ -27,6 +27,7 @@ void loop() {
   if(Butt_Flags == 1) {
     digitalWrite(PC13, LOW);
     Mouse.click();
+    delay(250);
   }else {
     digitalWrite(PC13, HIGH);
   }
