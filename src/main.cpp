@@ -1,7 +1,5 @@
-//TEST
-
 #include <Arduino.h>
-#include <Keyboard.h>
+#include <Mouse.h>
 
 bool Butt_Flags = 0;
 
@@ -15,7 +13,8 @@ void Butt_Event() {
 
 
 void setup() {
-  Keyboard.begin();
+  Mouse.begin();
+  //Keyboard.begin();
   pinMode(PC13, OUTPUT);
   pinMode(PB10, INPUT_PULLUP);
   digitalWrite(PC13, HIGH);
@@ -28,14 +27,14 @@ void setup() {
 void loop() {
   if(Butt_Flags == 1) {
     digitalWrite(PC13, LOW);
-    delay(100);
-    digitalWrite(PC13, HIGH);
-    delay(100);
-
+    Mouse.click();
+    /*
+    Keyboard.write(0x20);
+    delay(250);
+    Keyboard.release(0x20);
+    delay(250);
+    */
   }else {
-    digitalWrite(PC13, LOW);
-    delay(1000);
     digitalWrite(PC13, HIGH);
-    delay(1000);
   }
 }
