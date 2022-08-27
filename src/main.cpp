@@ -14,7 +14,6 @@ void Butt_Event() {
 
 void setup() {
   Mouse.begin();
-  //Keyboard.begin();
   pinMode(PC13, OUTPUT);
   pinMode(PB10, INPUT_PULLUP);
   digitalWrite(PC13, HIGH);
@@ -28,12 +27,6 @@ void loop() {
   if(Butt_Flags == 1) {
     digitalWrite(PC13, LOW);
     Mouse.click();
-    /*
-    Keyboard.write(0x20);
-    delay(250);
-    Keyboard.release(0x20);
-    delay(250);
-    */
   }else {
     digitalWrite(PC13, HIGH);
   }
