@@ -12,3 +12,5 @@ use stupid way but it work!!!
 |---|---|
 |***PB10***|push button|
 |***PC13***|LED (built-in LED)|
+
+![pinout](https://th.mouser.com/images/marketingid/2021/microsites/110783827/Pinout-Diagram.png)
